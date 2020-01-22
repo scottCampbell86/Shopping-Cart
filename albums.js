@@ -1,5 +1,5 @@
 const musicForEarthworms = {
-    id: 'Music for Earthworms',
+    id: 'Music For Earthworms',
     name: 'Music for Earthworms',
     description: 'Raw, Spooky',
     //year: 1997,
@@ -42,10 +42,10 @@ const theImpossibleKid = {
 
 };*/
 
-const discography = [ 
-    musicForEarthWorms, 
+const albums = [ 
+    musicForEarthworms, 
     appleseed,
     bazookaTooth,
 ];
 
-export default discography;
+export default albums;
