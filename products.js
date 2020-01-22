@@ -7,5 +7,5 @@ for (let i = 0; i < albums.length; i++) {
     const album = albums[i];
     const indexAlbum = renderAlbum(album);
     inStock.appendChild(indexAlbum);
-
+    //console.log(inStock);
 }
