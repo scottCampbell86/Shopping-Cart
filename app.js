@@ -1,13 +1,20 @@
-/*const heading = document.getElementById('heading');
-const title = document.getElementById('title');
-//const image = image...
-const description = document.getElementById('description');
-const year = document.getElementById('year');
-const label = document.getElementById('label');
-const popularSong = documeny.getElementById(popular-song);*/
+
+function renderAlbum(album) {
+    const line = document.createElement('li');
+    line.className = album.category;
+    line.title = album.description;
+
+    const albumTitle = document.createElement('h3');
+    albumTitle.textContent = album.name;
+    line.appendChild('h3');
+
+    const button = document.createElement('button');
+    button.textContent = 'Yup';
+    
+}
 
 
-
+export default renderAlbum
 
 
 
