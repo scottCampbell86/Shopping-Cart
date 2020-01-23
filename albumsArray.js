@@ -1,5 +1,5 @@
 const musicForEarthworms = {
-    id: 'Music For Earthworms',
+    id: 'music-for-earthworms',
     name: 'Music for Earthworms',
     image: './assets/MforEw.jpg',
     description: 'Raw; Spooky',
@@ -8,7 +8,7 @@ const musicForEarthworms = {
 };
 
 const appleseed = {
-    id: 'Appleseed',
+    id: 'appleseed',
     name: 'Appleseed',
     image: './assets/appleseed.jpg',
     description: 'Very spooky',
@@ -17,7 +17,7 @@ const appleseed = {
 };
 
 const float = {
-    id: 'Float',
+    id: 'float',
     name: 'Float',
     image: './assets/float.jpg',
     description: 'Foggy; Dystopic',
@@ -26,7 +26,7 @@ const float = {
 };
 
 const laborDays = {
-    id: 'Labor Days',
+    id: 'labor-days',
     name: 'Labor Days',
     image: './assets/labordays.jpg', 
     description: 'Inspired; Dynamic',
@@ -35,7 +35,7 @@ const laborDays = {
 };
 
 const bazookaTooth = {
-    id: 'Bazooka Tooth',
+    id: 'bazooka-tooth',
     name: 'Bazooka Tooth',
     image: './assets/bazookatooth.jpg',
     description: 'A Panic Attack',
@@ -44,7 +44,7 @@ const bazookaTooth = {
 };
 
 const noneShallPass = {
-    id: 'None Shall Pass',
+    id: 'none-shall-pass',
     name: 'None Shall Pass',
     image: './assets/noneshallpass.jpg', 
     description: 'A. Classic.',
@@ -53,7 +53,7 @@ const noneShallPass = {
 };
 
 const skelethon = {
-    id: 'Skelethon',
+    id: 'skelethon',
     name: 'Skelethon',
     image: './assets/skelethon.jpg',
     description: 'Dark; Psychadelic',
@@ -63,7 +63,7 @@ const skelethon = {
 
 
 const theImpossibleKid = {
-    id: 'The Impossible Kid',
+    id: 'the-impossible-kid',
     name: 'The Impossible Kid',
     image: './assets/impossible.jpg', 
     description: 'Honest; On A Good Day',
@@ -72,7 +72,7 @@ const theImpossibleKid = {
 
 };
 
-const albums = [ 
+export const albumsArray = [ 
     musicForEarthworms, 
     appleseed,
     float,
@@ -83,4 +83,20 @@ const albums = [
     theImpossibleKid
 ];
 
-export default albums;
+
+
+
+export const cart = [{
+    id: 'bazooka-tooth',
+    quantity: 1
+}, {
+    id: 'float',
+    quantity: 2
+}, {
+    id: 'music-for-earthworms',
+    quantity: 3
+}, {
+    id: 'sskelethon',
+    quantity: 4
+}];
+
