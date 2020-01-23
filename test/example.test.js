@@ -1,4 +1,4 @@
-import { albumsArray , cart } from '../albumsArray.js';
+import { albumsArray , cart } from '../Shopping-Cart/albumsArray.js';
 import { calcLineItem, findById, toUSD, calcOrderTotal } from '../utils.js';
 
 const test = QUnit.test;
@@ -58,14 +58,14 @@ test('time to test a function', function(assert) {
 
 test('time to test a function', function(assert) {
     //Arrange
-    const input = 'Bazooka Tooth';
-    const expected = 15.00;
+    const input = '';
+    const expected = '';
         
    
     
-    const result = calcOrderTotal('Bazooka Tooth');
+    const result = calcOrderTotal(input, );
     
-    assert.equal(result, 15.00);
+    assert.equal(result, '');
 });
 
-//calcOrderTotal(albumsArray, cart)
+

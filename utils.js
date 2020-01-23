@@ -1,4 +1,4 @@
-import cart from '../Shopping-Cart/albumsArray.js';
+import { cart , albumsArray } from '../Shopping-Cart/albumsArray.js';
 
 export function findById(someId, someArray) {
     for (let i = 0 ; i < someArray.length ; i++) {
@@ -19,30 +19,15 @@ export const toUSD = (number) => {
     return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 };
 
-
 export function calcOrderTotal(albumsArray, cart) {
-    let orderAmount;
-    //the album
-    for (let i = 0; i < albumsArray.length ; i++) {
-        let album = albumsArray[i];
-    };
-
-
-    
-    //the cart item
-    for (let j = 0; j < cart.length; j++) {
-        let cartItem = cart[j];
+    let orderAmount = toUSD(orderAmount);
+    for (let i = 0; i < cart.length ; i++) {
+        let cartItem = cart[i];
+        let purchaseItem = findById(cartItem.id, albumsArray);
+        let lineTotal = calcLineItem(purchaseItem.price, cartItem.quantity);
+        orderAmount = lineTotal + orderAmount;
+        return orderAmount; 
     }
-    if (album === cartItem) {
-        
-    //call that the line order ... turn that to money
-        let purchaseItem = toUSD(album.price, cartItem.quantity);
-    }
-    //match that with the cart item
-    orderAmount = orderAmount + purchaseItem;
-    //add that to orderAmount
-    return orderAmount;
-
-};
+}
 
     

@@ -1,4 +1,4 @@
-import { cart , albums } from '../albumsArray.js.';
+import { cart , albumsArray } from '../albumsArray.js.';
 import { renderCartLine } from '../renderCartline.js';
 import { findById, toUSD, calcLineItem };
 

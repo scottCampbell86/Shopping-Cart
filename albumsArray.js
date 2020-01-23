@@ -87,16 +87,16 @@ export const albumsArray = [
 
 
 export const cart = [{
-    name: 'Bazooka Tooth',
+    id: 'bazooka-tooth',
     quantity: 1
 }, {
-    name: 'Float',
+    id: 'float',
     quantity: 2
 }, {
-    name: 'Music For Earthworms',
+    id: 'music-for-earthworms',
     quantity: 3
 }, {
-    name: 'Skelethon',
+    id: 'sskelethon',
     quantity: 4
 }];
 
