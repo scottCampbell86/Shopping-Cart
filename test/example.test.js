@@ -1,46 +1,71 @@
-// IMPORT MODULES under test here:
-// import example from '../src/example.js';
-//import findById from './utils.js';
-import albums from '../albums.js';
-import { calcLineItem, findById } from './utils.js';
+import { albumsArray , cart } from '../albumsArray.js';
+import { calcLineItem, findById, toUSD, calcOrderTotal } from '../utils.js';
 
 const test = QUnit.test;
 
+
 test('time to test a function', function(assert) {
     //Arrange
-    const input = 2
-    const expected = 20
+    const input = 2;
+    const expected = 20;
         
-    // Set up your parameters and expectations
+   
     
     const result = calcLineItem(input, 10);
-    //Act 
-    // Call the function you're testing and set the result to a const
-
-    //Assert
-    // Make assertions about what is expected valid result
+    
     assert.deepEqual(result, expected);
 });
 
 
 test('time to test a function', function(assert) {
     //Arrange
-    const input = 'Float';
+    const input = 'float';
     const expected = {
-        id: 'Float',
+        id: 'float',
         name: 'Float',
         image: './assets/float.jpg',
         description: 'Foggy; Dystopic',
         category: 'Mush',
         price: 10.00
     };
+
+    
+    const result = findById(input, albumsArray);
+ 
+
+
+    assert.deepEqual(result, expected);
+});
+
+
+test('time to test a function', function(assert) {
+    //Arrange
+    const input = '10';
+    const expected = '10';
     // Set up your parameters and expectations
     
-    const result = findById(input, albums);
+    const result = toUSD(input);
     //Act 
     // Call the function you're testing and set the result to a const
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.deepEqual(result, expected);
+    assert.equal(result, expected);
+
 });
+
+
+
+test('time to test a function', function(assert) {
+    //Arrange
+    const input = 'Bazooka Tooth';
+    const expected = 15.00;
+        
+   
+    
+    const result = calcOrderTotal('Bazooka Tooth');
+    
+    assert.equal(result, 15.00);
+});
+
+//calcOrderTotal(albumsArray, cart)

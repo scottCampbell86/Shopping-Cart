@@ -1,16 +1,16 @@
 
-export default const renderCartItem = (cartItem, storeItem) => {
-    tableBody = document.getElementById('tableBody');
+export default const renderCartItem = (cartItem, album) => {
+    const tableBody = document.createElement('tbody');
 
     const tableRow = document.createElement('tr');
     tableBody.appendChild(tableRow);
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = storeItem.name;
+    nameCell.textContent = album.name;
     tableRow.appendChild('nameCell');
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = storeItem.price;
+    priceCell.textContent = album.price;
     tableRow.appendChild('priceCell');
 
     const quantityCell = document.createElement('td');
@@ -18,9 +18,8 @@ export default const renderCartItem = (cartItem, storeItem) => {
     tableRow.appendChild('quantityCell');
 
     const totalCell = document.createElement('td');
-    totalCell.textContent = storeItem.price * cartItem.quantity;
+    totalCell.textContent = album.price * cartItem.quantity;
     tableRow.appendChild('totalCell');
 
-  //const footerRow = document.createElement//('tfoot');
     return tableRow;
 }

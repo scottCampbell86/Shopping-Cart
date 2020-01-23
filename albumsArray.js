@@ -72,7 +72,7 @@ const theImpossibleKid = {
 
 };
 
-export const albums = [ 
+export const albumsArray = [ 
     musicForEarthworms, 
     appleseed,
     float,
