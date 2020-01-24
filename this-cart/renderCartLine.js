@@ -1,6 +1,6 @@
 import { toUSD } from '../utils.js';
 
-export function renderCartLine (album, cartItem) {
+export function renderCartLine(album, cartItem) {
     const tableBody = document.createElement('tbody');
 
     const tableRow = document.createElement('tr');
@@ -21,7 +21,7 @@ export function renderCartLine (album, cartItem) {
 
     const totalCell = document.createElement('td');
     totalCell.className = 'line-item-total';
-    const total = album.price * cartItem.quantity;
+    const total = cartItem.quantity * album.price;
     totalCell.textContent = toUSD(total);
     tableRow.appendChild(totalCell);
 

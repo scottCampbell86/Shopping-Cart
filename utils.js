@@ -1,5 +1,3 @@
-import { albumsArray, cart } from '../albumsArray.js';
-
 export function findById(someId, someArray) {
     for (let i = 0 ; i < someArray.length ; i++) {
         const item = someArray[i];
