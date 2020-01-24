@@ -8,11 +8,12 @@ const orderTotalCell = document.getElementById('order-total-cell');
 
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
-    const album = findById(albumsArray, cartItem.id);
-    const albumMatch = renderCartLine(cartItem, album);
+    const album = findById(cartItem.id, albumsArray);
+    const albumMatch = renderCartLine(album, cartItem);
     tableBody.appendChild(albumMatch);  
 }
 
 
-const amountTotal = calcOrderTotal(cart, albumsArray);
+const amountTotal = calcOrderTotal(albumsArray, cart);
+console.log(amountTotal);
 orderTotalCell.textContent = toUSD(amountTotal);
