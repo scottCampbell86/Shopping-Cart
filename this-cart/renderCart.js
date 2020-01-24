@@ -9,8 +9,8 @@ const orderTotalCell = document.getElementById('order-total-cell');
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
     const album = findById(albumsArray, cartItem.id);
-    const itemRendered = renderCartLine(cartItem, album);
-    tableBody.appendChild('itemRendered');  
+    const albumMatch = renderCartLine(cartItem, album);
+    tableBody.appendChild('albumMatch');  
 }
 
 
