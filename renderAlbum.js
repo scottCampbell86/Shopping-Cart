@@ -26,11 +26,12 @@ function renderAlbum(album) {
     li.appendChild(button);
     
     return li;
+    
 }
 
-
 export default renderAlbum;
- 
+
+
 
 
 

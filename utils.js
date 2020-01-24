@@ -22,10 +22,7 @@ export function calcOrderTotal(albumsArray, cart) {
     let orderAmount = 0;
     for (let i = 0; i < cart.length ; i++) {
         let cartItemId = cart[i].id;
-        console.log(cartItemId);
         let purchaseItem = findById(cartItemId, albumsArray);
-        console.log(purchaseItem.price);
-        console.log(cartItemId.quantity);
         let lineTotal = calcLineItem(purchaseItem.price, cart[i].quantity);
         orderAmount = lineTotal + orderAmount;   
     }
