@@ -1,0 +1,95 @@
+main {
+  margin-top: 615px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#aes {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(http://static1.squarespace.com/static/554959f9e4b04cef2f6cfb06/554b9067e4b029f0ef39e115/582382106b8f5ba74818f38e/1478722386835/promoted-media-optimized_56c520080f27d.jpg?format=1500w);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius
+}
+
+#header {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;;
+}
+
+table, .order-now-container {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+}
+
+.order-now-container {
+  text-align: right;
+}
+
+.order-now-container button {
+  height: 50px;
+  width: 200px;
+  font-size: 1.25em;
+  background:;
+  color:black;
+  border-radius: 30px;
+ 
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+}
+
+thead {
+  background: #444;
+  color: white;
+}
+
+table th, table td {
+  text-align: right;
+  padding: 10px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+tbody {
+  background: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #eee;
+}
+
+tbody td {
+  font-size: 0.9rem;
+}
+
+.line-item-total {
+  font-weight: bolder;
+}
+
+tfoot {
+  background: #999;
+  color: white;
+}
+
