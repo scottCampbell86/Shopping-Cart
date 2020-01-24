@@ -1,5 +1,5 @@
 import renderAlbum from './renderAlbum.js';
-import { albumsArray } from '../albumsArray.js';
+import { albumsArray } from './albumsArray.js';
 
 const inStock = document.getElementById('in-stock');
 
