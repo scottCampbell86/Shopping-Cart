@@ -1,10 +1,10 @@
-import { albumsArray , cart } from '../Shopping-Cart/albumsArray.js';
+import { albumsArray, cart } from '../albumsArray.js';
 import { calcLineItem, findById, toUSD, calcOrderTotal } from '../utils.js';
 
 const test = QUnit.test;
 
 
-test('time to test a function', function(assert) {
+test('calcLine', function(assert) {
     //Arrange
     const input = 2;
     const expected = 20;
@@ -17,7 +17,7 @@ test('time to test a function', function(assert) {
 });
 
 
-test('time to test a function', function(assert) {
+test('findById', function(assert) {
     //Arrange
     const input = 'float';
     const expected = {
@@ -38,34 +38,28 @@ test('time to test a function', function(assert) {
 });
 
 
-test('time to test a function', function(assert) {
-    //Arrange
+test('toUSD', function(assert) {
+    
     const input = '10';
     const expected = '10';
-    // Set up your parameters and expectations
+
     
     const result = toUSD(input);
-    //Act 
-    // Call the function you're testing and set the result to a const
-
-    //Assert
-    // Make assertions about what is expected valid result
+    
     assert.equal(result, expected);
 
 });
 
+test('calc test', function(assert) {
+    
+    //const input = ;
+    const expected = 45.00;
+    
 
-
-test('time to test a function', function(assert) {
-    //Arrange
-    const input = '';
-    const expected = '';
-        
+    const result = calcOrderTotal(albumsArray, cart);
    
-    
-    const result = calcOrderTotal(input, );
-    
-    assert.equal(result, '');
+    assert.equal(result, expected);
+
 });
 
 

@@ -1,25 +1,29 @@
+import { toUSD } from '../utils.js';
 
-export default const renderCartItem = (cartItem, album) => {
+export function renderCartLine(album, cartItem) {
     const tableBody = document.createElement('tbody');
 
     const tableRow = document.createElement('tr');
     tableBody.appendChild(tableRow);
 
     const nameCell = document.createElement('td');
+    nameCell.className = 'align-left';
     nameCell.textContent = album.name;
-    tableRow.appendChild('nameCell');
+    tableRow.appendChild(nameCell);
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = album.price;
-    tableRow.appendChild('priceCell');
+    priceCell.textContent = toUSD(album.price);
+    tableRow.appendChild(priceCell);
 
     const quantityCell = document.createElement('td');
     quantityCell.textContent = cartItem.quantity;
-    tableRow.appendChild('quantityCell');
+    tableRow.appendChild(quantityCell);
 
     const totalCell = document.createElement('td');
-    totalCell.textContent = album.price * cartItem.quantity;
-    tableRow.appendChild('totalCell');
+    totalCell.className = 'line-item-total';
+    const total = cartItem.quantity * album.price;
+    totalCell.textContent = toUSD(total);
+    tableRow.appendChild(totalCell);
 
     return tableRow;
 }

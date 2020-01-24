@@ -91,12 +91,12 @@ export const cart = [{
     quantity: 1
 }, {
     id: 'float',
-    quantity: 2
+    quantity: 1
 }, {
     id: 'music-for-earthworms',
-    quantity: 3
+    quantity: 1
 }, {
-    id: 'sskelethon',
-    quantity: 4
+    id: 'skelethon',
+    quantity: 1
 }];
 
