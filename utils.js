@@ -5,7 +5,7 @@ export function findById(someId, someArray) {
             return item;
         }
     }
-};
+}
 
 export function calcLineItem(quantity, price) {
     let product = quantity * price;
@@ -15,7 +15,7 @@ export function calcLineItem(quantity, price) {
 
 export function toUSD(number){
     return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-};
+}
 
 
 export function calcOrderTotal(albumsArray, cart) {

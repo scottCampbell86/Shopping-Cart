@@ -1,3 +1,5 @@
+import { addToStorage } from './eventListener.js';
+
 function renderAlbum(album) {
 
     const li = document.createElement('li');
@@ -23,8 +25,13 @@ function renderAlbum(album) {
     const button = document.createElement('button');
     button.value = album.id;
     button.textContent = 'Buy';
-    li.appendChild(button);
     
+
+    button.addEventListener('click', function() {
+        addToStorage(button.value);
+    });
+    
+    li.appendChild(button);
     return li;
     
 }
