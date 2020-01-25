@@ -6,6 +6,7 @@ import { findById, toUSD, calcOrderTotal } from '../utils.js';
 const tableBody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 const itemsFromStorage = localStorage.getItem('cart');
+const placeOrderButton = document.getElementById('place-order-button');
 
 let cart;
 if (itemsFromStorage) {
@@ -24,3 +25,14 @@ for (let i = 0; i < cart.length; i++) {
 
 const amountTotal = calcOrderTotal(albumsArray, cart);
 orderTotalCell.textContent = toUSD(amountTotal);
+
+if (cart.length === 0) {
+    placeOrderButton.disabled = true;
+}
+else {
+    placeOrderButton.addEventListener('click', () => {
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+        localStorage.removeItem('cart'); 
+        window.location = '../';  
+    });
+}
