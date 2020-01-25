@@ -56,6 +56,9 @@ table, .order-now-container {
 table {
   border-collapse: collapse;
   border: 1px solid #aaa;
+
+  
+
 }
 
 thead {
@@ -73,15 +76,17 @@ table th, table td {
 }
 
 tbody {
-  background: white;
+  background: rgb(226, 225, 225);
+  
 }
 
 tbody tr:nth-child(even) {
-  background: #eee;
+  background: rgb(238, 237, 237);
 }
 
 tbody td {
   font-size: 0.9rem;
+ 
 }
 
 .line-item-total {
@@ -91,5 +96,14 @@ tbody td {
 tfoot {
   background: #999;
   color: white;
+
 }
 
+#table-body {
+  opacity: .9;
+
+}
+
+th {
+  opacity: .75;
+}
