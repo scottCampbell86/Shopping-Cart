@@ -13,16 +13,14 @@ if (itemsFromStorage) {
 } else {
     cart = [];
 }
+
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
-    const album = findById(cartItem.id, albumsArray);
+    let album = findById(cartItem.id, albumsArray);
     const albumMatch = renderCartLine(album, cartItem);
-    console.log(albumMatch);
-    tableBody.appendChild(albumMatch);  
-
+    tableBody.appendChild(albumMatch);
 }
 
 
 const amountTotal = calcOrderTotal(albumsArray, cart);
-console.log(amountTotal);
 orderTotalCell.textContent = toUSD(amountTotal);

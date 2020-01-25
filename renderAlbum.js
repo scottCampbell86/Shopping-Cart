@@ -25,13 +25,13 @@ function renderAlbum(album) {
     const button = document.createElement('button');
     button.value = album.id;
     button.textContent = 'Buy';
+    li.appendChild(button);
     
-
     button.addEventListener('click', function() {
-        addToStorage(button.value);
+        addToStorage(button.value); 
     });
     
-    li.appendChild(button);
+    
     return li;
     
 }

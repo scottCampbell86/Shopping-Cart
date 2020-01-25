@@ -51,8 +51,5 @@ export function addToStorage(cartItem) {
         increaseThisItem(CART, cartItem);
     }
     announceAdded(cartItem);
-    console.log(CART)
-    let x = updateLocalStorage(CART);
-    console.log(x);
-
+    updateLocalStorage(CART);
 }
