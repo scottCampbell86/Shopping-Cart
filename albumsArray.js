@@ -91,7 +91,7 @@ export const cart = [{
     quantity: 1
 }, {
     id: 'float',
-    quantity: 1
+    quantity: 5
 }, {
     id: 'music-for-earthworms',
     quantity: 1
