@@ -29,5 +29,20 @@ export function calcOrderTotal(albumsArray, cart) {
     return orderAmount;
 }
 
+export function addProduct(product) {
+    // retrievce existing product object array
+
+    // push the new product into the array
+    
+    // re-save the products array
+
+
+    const cartKey = localStorage.getItem('cart');
+    if (!findById(product, 'cart') {
+        const localProduct = JSON.stringify(product);
+        cart.push('localProduct');
+        localStorage.setItem(cartKey, 'localProduct');
+    }
+
 
     
